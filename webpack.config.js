@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const EslingPlugin = require('eslint-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = (env, options) => {
   const isProduction = options.mode === 'production';
@@ -45,6 +46,7 @@ module.exports = (env, options) => {
       extensions: ['.ts', '.js'],
     },
     plugins: [
+      new Dotenv(),
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: 'index.html',

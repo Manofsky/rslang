@@ -9,7 +9,7 @@ class API {
   words: string;
 
   constructor() {
-    this.base = 'https://react-rslang-be-d-khabarova.herokuapp.com';
+    this.base = process.env.APP_API_URL as string;
     this.users = `${this.base}/users`;
     this.words = `${this.base}/words`;
   }

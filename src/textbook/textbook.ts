@@ -5,7 +5,7 @@ import './textbook.scss';
 import { showSprintPlay } from '../games/sprint/handlers';
 import startAudiocall from '../games/audiocall/startGame';
 
-const base = 'https://react-rslang-be-d-khabarova.herokuapp.com';
+const base = process.env.APP_API_URL as string;
 const api = new API();
 const maxPage = 29;
 
